@@ -24,11 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.bPortfolio.setOnClickListener {
             supportFragmentManager.commit {
-//                add(R.id.frameContent, PortfolioFragment())
-//                val bundle = Bundle()
-//                bundle.putString("msg", "Hello There")
-//                val fPort = PortfolioFragment()
-//                fPort.arguments = bundle
                 supportFragmentManager.commit {
                     replace(R.id.frameContent, PortfolioFragment())
                 }
