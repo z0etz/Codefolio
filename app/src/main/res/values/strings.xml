@@ -2,7 +2,6 @@
     <string name="app_name">Codefolio</string>
     <string name="name">Katja Klahr</string>
     <string name="occupation">Arkitekt och student inom applikationsdesign.</string>
-    <string name="town">Stockholm</string>
     <string name="presentation">Katja har designat många olika typer av byggnader
         i sitt arbete som arkitekt, hon är van vid att arbeta med BIM och samordna projekt.
         Hon vidareutbildar sig nu inom programmering, med siktet inställt på att driva
@@ -16,4 +15,6 @@
     <string name="previous">Previous</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="portfolio">Portfolio</string>
 </resources>

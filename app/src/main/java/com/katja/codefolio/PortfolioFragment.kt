@@ -18,4 +18,11 @@ class PortfolioFragment: Fragment() {
         binding = FragmentPortfolioBinding.inflate(layoutInflater, container,false)
         return binding.root
     }
+
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        val msg = arguments?.getString("msg")
+//    }
+
 }

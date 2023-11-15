@@ -35,12 +35,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/town"
-        android:padding="@dimen/padding_small"
-        android:textSize="@dimen/font_medium"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/presentation"
         android:padding="@dimen/padding_small"
         android:textSize="@dimen/font_small"

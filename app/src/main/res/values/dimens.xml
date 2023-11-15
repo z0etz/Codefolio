@@ -7,4 +7,6 @@
     <dimen name="padding_medium">25dp</dimen>
     <dimen name="padding_large">50dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+
 </resources>
