@@ -1,14 +1,13 @@
 package com.katja.codefolio
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
-import androidx.recyclerview.widget.RecyclerView
 import com.katja.codefolio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
 
 //    val portfolioItemsList = listOf(
 //
@@ -18,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        supportFragmentManager.commit{
+
+        supportFragmentManager.commit {
             add(R.id.frameContent, PortfolioFragment())
         }
 
@@ -34,16 +33,16 @@ class MainActivity : AppCompatActivity() {
                     replace(R.id.frameContent, PortfolioFragment())
                 }
             }
+        }
 
-            binding.bProfile.setOnClickListener {
-                supportFragmentManager.commit {
-                    replace(R.id.frameContent, ProfileFragment())
-                }
+        binding.bProfile.setOnClickListener {
+            supportFragmentManager.commit {
+                replace(R.id.frameContent, ProfileFragment())
             }
+        }
 
 //        val recyclerView: RecyclerView = binding.???
 
-        }
-
     }
+
 }
