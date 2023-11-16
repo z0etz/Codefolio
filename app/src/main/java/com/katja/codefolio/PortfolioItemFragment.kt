@@ -16,10 +16,10 @@ class PortfolioItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPortfolioItemBinding.inflate(layoutInflater, container,false)
-//        val args = arguments
-//        val portfolioItem = args?.getSerializable("portfolioItem") as PortfolioItem
+        val args = arguments
+        val portfolioItem = args?.getSerializable("portfolioItem") as PortfolioItem
 
-//        binding.itemTitle.text = portfolioItem.title
+        binding.itemTitle.text = portfolioItem.title
 
         return binding.root
     }

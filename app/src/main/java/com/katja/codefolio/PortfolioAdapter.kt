@@ -41,7 +41,7 @@ class PortfolioAdapter(private val fragmentManager: FragmentManager,
             fragment.arguments = args
 
             fragmentManager.commit {
-                replace(R.id.frameContent, PortfolioItemFragment())
+                replace(R.id.frameContent, fragment)
             }
         }
     }
