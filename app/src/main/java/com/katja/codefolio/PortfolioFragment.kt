@@ -26,22 +26,23 @@ class PortfolioFragment: Fragment() {
         return binding.root
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        val layoutManager = GridLayoutManager(requireContext(), 3)
-//        rvPortfolio.layoutManager = layoutManager
-//
-//        // Access the presenter method to get the portfolio list
-//        val presenter = AllmightyPresenter(requireContext())
-//        val portfolioList = presenter.createPortfolioList()
-//
-//        // Initialize the adapter with the portfolio list
-//        portfolioAdapter = PortfolioAdapter(portfolioList)
-//
-//        // Set the adapter to the RecyclerView
-//        rvPortfolio.adapter = portfolioAdapter
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-//    }
+        val layoutManager = GridLayoutManager(requireContext(), 3)
+        rvPortfolio = binding.rvPortfolio
+        rvPortfolio.layoutManager = layoutManager
+
+        // Access the presenter method to get the portfolio list
+        val presenter = AllmightyPresenter(requireContext())
+        val portfolioList = presenter.createPortfolioList()
+
+        // Initialize the adapter with the portfolio list
+        portfolioAdapter = PortfolioAdapter(portfolioList)
+
+        // Set the adapter to the RecyclerView
+        rvPortfolio.adapter = portfolioAdapter
+
+    }
 
 }

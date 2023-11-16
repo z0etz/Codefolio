@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.katja.codefolio.databinding.PortfolioItemBinding
 
 
-class PortfolioAdapter(val portfolioItemList: List<PortfolioItem>) :
+class PortfolioAdapter(var portfolioItemList: List<PortfolioItem>) :
     RecyclerView.Adapter<PortfolioAdapter.ViewHolder>() {
 
     class ViewHolder(binding: PortfolioItemBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -40,6 +40,11 @@ class PortfolioAdapter(val portfolioItemList: List<PortfolioItem>) :
 
     override fun getItemCount(): Int {
         return portfolioItemList.size
+    }
+
+    fun updateData(newPortfolioList: List<PortfolioItem>) {
+        portfolioItemList = newPortfolioList
+        notifyDataSetChanged()
     }
 
 }
