@@ -24,11 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.bPortfolio.setOnClickListener {
             supportFragmentManager.commit {
-                supportFragmentManager.commit {
                     replace(R.id.frameContent, PortfolioFragment())
                 }
             }
-        }
 
         binding.bProfile.setOnClickListener {
             supportFragmentManager.commit {

@@ -6,13 +6,15 @@
         i sitt arbete som arkitekt, hon är van vid att arbeta med BIM och samordna projekt.
         Hon vidareutbildar sig nu inom programmering, med siktet inställt på att driva
         digitaliseringen av byggbranschen.</string>
-    <string name="linkedin">https://www.linkedin.com/in/katjatklahr/</string>
+    <string name="linkedin">https://www.linkedin.com/in/katjaklahr/</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="profile">Profil</string>
     <string name="portfolio">Portfolio</string>
     <string name="see_linkedin">Se Katjas LinkedIn-sida</string>
 
     <!-- Portfolio Items strings -->
+    <string name="title_dummy">Titel</string>
+    <string name="description_dummy">Beskrivning</string>
     <string name="title0">App 1</string>
     <string name="shortDescription0">Info om app 1</string>
     <string name="description0">Mer info om app 1</string>

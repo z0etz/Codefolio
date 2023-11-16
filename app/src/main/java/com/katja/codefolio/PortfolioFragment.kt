@@ -38,7 +38,7 @@ class PortfolioFragment: Fragment() {
         val portfolioList = presenter.createPortfolioList()
 
         // Initialize the adapter with the portfolio list
-        portfolioAdapter = PortfolioAdapter(portfolioList)
+        portfolioAdapter = PortfolioAdapter(requireActivity().supportFragmentManager, portfolioList)
 
         // Set the adapter to the RecyclerView
         rvPortfolio.adapter = portfolioAdapter

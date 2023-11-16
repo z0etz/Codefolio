@@ -7,12 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.RecyclerView
 import com.katja.codefolio.databinding.PortfolioItemBinding
 
 
-class PortfolioAdapter(var portfolioItemList: List<PortfolioItem>) :
-    RecyclerView.Adapter<PortfolioAdapter.ViewHolder>() {
+class PortfolioAdapter(private val fragmentManager: FragmentManager,
+                       var portfolioItemList: List<PortfolioItem>): RecyclerView.Adapter<PortfolioAdapter.ViewHolder>() {
 
     class ViewHolder(binding: PortfolioItemBinding) : RecyclerView.ViewHolder(binding.root) {
         val cardView: CardView = binding.root
@@ -33,8 +35,9 @@ class PortfolioAdapter(var portfolioItemList: List<PortfolioItem>) :
         holder.tvDescription.text = currentPortfolioItem.description
         holder.imImage.setImageResource(currentPortfolioItem.imgSrc)
         holder.cardView.setOnClickListener{
-            Toast.makeText(holder.cardView.context, "Clicked on item: ${currentPortfolioItem.title}",
-                Toast.LENGTH_SHORT).show()
+            fragmentManager.commit {
+                replace(R.id.frameContent, PortfolioItemFragment())
+            }
         }
     }
 

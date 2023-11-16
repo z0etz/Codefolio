@@ -76,4 +76,32 @@ class AllmightyPresenter(private val context: Context) {
         return portfolioList
     }
 
+    fun createPortfolioItemImageList(selectedPosition: Int): ArrayList<Int> {
+        val imageList = ArrayList<Int>()
+        var imageNumber = 0
+
+        // Keep adding image items until there are no more image resources for the selected portfolio item
+        while (true) {
+            // Construct the image resource name for the selected portfolio item
+            val imageName = "im_${selectedPosition}_$imageNumber"
+            val imageResourceId = context.resources.getIdentifier(
+                imageName,
+                "drawable",
+                context.packageName
+            )
+
+            // Check if the resource exists, if not, break the loop
+            if (imageResourceId == 0) {
+                break
+            }
+
+            imageList.add(imageResourceId)
+
+            // Increment to check for the next image resource for the selected portfolio item
+            imageNumber++
+        }
+
+        return imageList
+    }
+
 }
