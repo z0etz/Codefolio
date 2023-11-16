@@ -1,21 +1,17 @@
-package com.katja.codefolio;
+package com.katja.codefolio
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.cardview.widget.CardView
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.katja.codefolio.databinding.PortfolioItemBinding
 
 
 class PortfolioItemImageAdapter(
-    private val fragmentManager: FragmentManager,
-    var portfolioItemImageList: List<PortfolioItem>
+    var portfolioItemImageList: ArrayList<Int>
 ) : RecyclerView.Adapter<PortfolioItemImageAdapter.ViewHolder>() {
 
     class ViewHolder(binding: PortfolioItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val cardView: CardView = binding.root
         val imImage: ImageView = binding.portfolioItemImage
 
     }
@@ -32,6 +28,6 @@ class PortfolioItemImageAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentImageItem = portfolioItemImageList[position]
-        holder.imImage.setImageResource(currentImageItem.imgSrc)
+        holder.imImage.setImageResource(currentImageItem)
     }
 }

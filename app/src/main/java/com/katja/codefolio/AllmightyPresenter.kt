@@ -1,7 +1,6 @@
 package com.katja.codefolio
 
 import android.content.Context
-import android.util.Log
 
 class AllmightyPresenter(private val context: Context) {
     fun createPortfolioList(): ArrayList<PortfolioItem> {
@@ -42,66 +41,52 @@ class AllmightyPresenter(private val context: Context) {
                 "string",
                 context.packageName
             )
-            val imgSrc1 = context.resources.getIdentifier(
-                "im_$itemNumber" + "_1",
-                "drawable",
-                context.packageName
-            )
-            val imgSrc2 = context.resources.getIdentifier(
-                "im_$itemNumber" + "_2",
-                "drawable",
-                context.packageName
-            )
-            val imgSrc3 = context.resources.getIdentifier(
-                "im_$itemNumber" + "_3",
-                "drawable",
-                context.packageName
-            )
 
-            val title = if (titleResId != 0) context.getString(titleResId) else ""
-            val shortDescription = if (shortDescriptionResId != 0) context.getString(shortDescriptionResId) else ""
-            val description = if (descriptionResId != 0) context.getString(descriptionResId) else ""
+            val imagesSrc = ArrayList<Int>()
+            var imageNumber = 1
 
-            val portfolioItem = PortfolioItem(title, shortDescription, description, imageResourceId,
-                imgSrc1.takeIf { it != 0 }, imgSrc2.takeIf { it != 0 }, imgSrc3.takeIf { it != 0 })
-            portfolioList.add(portfolioItem)
+            // Keep adding image items until there are no more image resources for the selected portfolio item
+            while (true) {
+                // Construct the image resource name for the selected portfolio item
+                val imageForListName = "im_" + itemNumber + "_" + imageNumber
+                val imageResourceIdforList = context.resources.getIdentifier(
+                    imageForListName, "drawable", context.packageName
+                )
 
-            // Debug statement to print course information
-            println("PortfolioListDebug: Added Portfolio item: " + title)
+                // Check if the resource exists, if not, break the loop
+                if (imageResourceIdforList == 0) {
+                    break
+                }
 
-            // Increment int to add next resource
-            itemNumber++
-        }
+                imagesSrc.add(imageResourceIdforList)
 
-        return portfolioList
-    }
+                // Debug statement to print course information
+                println("ImageListDebug: Added Image item: " + imageName)
 
-    fun createPortfolioItemImageList(selectedPosition: Int): ArrayList<Int> {
-        val imageList = ArrayList<Int>()
-        var imageNumber = 0
-
-        // Keep adding image items until there are no more image resources for the selected portfolio item
-        while (true) {
-            // Construct the image resource name for the selected portfolio item
-            val imageName = "im_${selectedPosition}_$imageNumber"
-            val imageResourceId = context.resources.getIdentifier(
-                imageName,
-                "drawable",
-                context.packageName
-            )
-
-            // Check if the resource exists, if not, break the loop
-            if (imageResourceId == 0) {
-                break
+                // Increment to check for the next image resource for the selected portfolio item
+                imageNumber++
             }
 
-            imageList.add(imageResourceId)
+                val title = if (titleResId != 0) context.getString(titleResId) else ""
+                val shortDescription =
+                    if (shortDescriptionResId != 0) context.getString(shortDescriptionResId) else ""
+                val description =
+                    if (descriptionResId != 0) context.getString(descriptionResId) else ""
 
-            // Increment to check for the next image resource for the selected portfolio item
-            imageNumber++
+                val portfolioItem = PortfolioItem(
+                    title, shortDescription, description, imageResourceId,
+                    imagesSrc
+                )
+                portfolioList.add(portfolioItem)
+
+                // Debug statement to print course information
+                println("PortfolioListDebug: Added Portfolio item: " + title)
+
+                // Increment int to add next resource
+                itemNumber++
+            }
+
+            return portfolioList
         }
-
-        return imageList
-    }
 
 }
