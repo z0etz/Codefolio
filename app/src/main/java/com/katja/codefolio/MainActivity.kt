@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//        val recyclerView: RecyclerView = binding.???
-
     }
 
 }
