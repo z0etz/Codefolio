@@ -2,7 +2,6 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/portfolio_item_root"
     android:layout_width="match_parent"
@@ -14,12 +13,15 @@
     <TextView
         android:id="@+id/portfolio_item_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/font_medium"
+        android:layout_marginHorizontal="@dimen/font_medium"/>
 
     <ImageView
         android:id="@+id/portfolio_item_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"/>
 
     <TextView
         android:id="@+id/short_descripton"
@@ -34,8 +36,8 @@
         android:textStyle="bold"
         android:textColor="@color/mountain_gray"
         android:textSize="@dimen/font_medium"
-        tools:text="short_description"
-        android:text="short_description"
+        android:layout_marginBottom="@dimen/font_medium"
+        android:layout_marginHorizontal="@dimen/font_medium"
     />
 
 </androidx.cardview.widget.CardView>

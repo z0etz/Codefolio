@@ -1,11 +1,10 @@
-package com.katja.codefolio;
+package com.katja.codefolio
 
+import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
@@ -35,6 +34,12 @@ class PortfolioAdapter(private val fragmentManager: FragmentManager,
         holder.tvDescription.text = currentPortfolioItem.description
         holder.imImage.setImageResource(currentPortfolioItem.imgSrc)
         holder.cardView.setOnClickListener{
+            val fragment = PortfolioItemFragment()
+            val args = Bundle().apply {
+                putSerializable("portfolioItem", currentPortfolioItem)
+            }
+            fragment.arguments = args
+
             fragmentManager.commit {
                 replace(R.id.frameContent, PortfolioItemFragment())
             }

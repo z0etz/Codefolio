@@ -1,3 +1,6 @@
+// Tanken var att bygga appen enl. MVP, men jag lyckas inte riktigt förstå hur det ska göras med
+// fragment, så jag tar gärna feedback på det.
+
 package com.katja.codefolio
 
 import android.os.Bundle
@@ -8,10 +11,6 @@ import com.katja.codefolio.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-
-//    val portfolioItemsList = listOf(
-//
-//    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
