@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="font_xs">12sp</dimen>
     <dimen name="font_small">14sp</dimen>
     <dimen name="font_medium">16sp</dimen>
     <dimen name="font_large">24sp</dimen>
@@ -7,6 +8,6 @@
     <dimen name="margin_medium">25dp</dimen>
     <dimen name="margin_large">50dp</dimen>
     <dimen name="button_width">150dp</dimen>
-    <dimen name="portfolio_item_height">250dp</dimen>
+    <dimen name="portfolio_item_height">200dp</dimen>
 
 </resources>

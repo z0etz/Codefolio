@@ -15,9 +15,27 @@
     <!-- Portfolio Items strings -->
     <string name="title_dummy">Titel</string>
     <string name="description_dummy">Beskrivning</string>
-    <string name="title0">App 1</string>
-    <string name="shortDescription0">Info om app 1</string>
-    <string name="description0">Mer info om app 1</string>
+    <string name="title0">Zonventure</string>
+    <string name="shortDescription0">En app med digitala äventyr!</string>
+    <string name="description0">Zonventure är en app för att spela spännande äventyr ute den riktigt världen.
+        Den byggdes innan jag lärde mig programmera, men därmot har jag varit involverad i appens
+        konceptframtagning samt UI- och UX-design.</string>
+    <string name="title1">BMI - kalkylator</string>
+    <string name="shortDescription1">Räkna ut din BMI.</string>
+    <string name="description1">En enkel app för att räkna ut BMI.</string>
+    <string name="title2">Employee list</string>
+    <string name="shortDescription2">Lista över anställda.</string>
+    <string name="description2">En list där man kan spara anställda och information om dem.</string>
+    <string name="title3">Sebastians Choklateria</string>
+    <string name="shortDescription3">App med restaurangmeny.</string>
+    <string name="description3">En restaurantmeny som är en chokladälskares dröm.</string>
+    <string name="title4">Kalkylator</string>
+    <string name="shortDescription4">Kalakylator för 9 olika uträkningar.</string>
+    <string name="description4">Gruppuppgift där vi skapade en kalkylator som kan räkna
+        +, -, *, /, √, %, Pythagoras Sats, Area och Volym. </string>
+    <string name="title5">Bubbles Notepad</string>
+    <string name="shortDescription5">Anteckningsapp med vackra champagnebubblor.</string>
+    <string name="description5">En anteckningsapp med dykning och champagne som tema.</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

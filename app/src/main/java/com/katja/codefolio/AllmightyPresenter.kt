@@ -86,6 +86,7 @@ class AllmightyPresenter(private val context: Context) {
                 itemNumber++
             }
 
+            portfolioList.reverse()
             return portfolioList
         }
 
