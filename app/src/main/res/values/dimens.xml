@@ -8,6 +8,8 @@
     <dimen name="margin_medium">25dp</dimen>
     <dimen name="margin_large">50dp</dimen>
     <dimen name="button_width">150dp</dimen>
-    <dimen name="portfolio_item_height">200dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
 
 </resources>

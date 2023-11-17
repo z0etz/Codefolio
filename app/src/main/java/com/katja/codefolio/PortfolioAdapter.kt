@@ -31,7 +31,7 @@ class PortfolioAdapter(private val fragmentManager: FragmentManager,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentPortfolioItem = portfolioItemList[position]
         holder.tvTitle.text = currentPortfolioItem.title
-        holder.tvDescription.text = currentPortfolioItem.description
+        holder.tvDescription.text = currentPortfolioItem.short_description
         holder.imImage.setImageResource(currentPortfolioItem.imgSrc)
         holder.cardView.setOnClickListener{
             val fragment = PortfolioItemFragment()

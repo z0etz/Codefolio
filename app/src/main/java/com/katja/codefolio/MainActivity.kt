@@ -1,6 +1,3 @@
-// Tanken var att bygga appen enl. MVP, men jag lyckas inte riktigt förstå hur det ska göras med
-// fragment, så jag tar gärna feedback på det.
-
 package com.katja.codefolio
 
 import android.os.Bundle
